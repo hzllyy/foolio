@@ -1,0 +1,13 @@
+.toolbar {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-8);
+  padding: var(--space-16) var(--space-8);
+  border-right: var(--border-width-hairline) solid var(--lighter-primary);
+  overflow-y: auto;
+}
+
+.toolButton {
+  width: 100%;
+  white-space: nowrap;
+}

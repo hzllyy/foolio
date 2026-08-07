@@ -1,0 +1,12 @@
+.row {
+  display: flex;
+  align-items: center;
+  gap: var(--space-16);
+  flex-wrap: wrap;
+}
+
+.darkSurface {
+  padding: var(--space-16);
+  background: var(--color-primary);
+  border-radius: var(--radius-pill);
+}

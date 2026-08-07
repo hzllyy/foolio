@@ -1,0 +1,89 @@
+.shell {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-height: 0;
+  background: var(--color-primary);
+  color: var(--color-secondary);
+  font-family: var(--font-family-body);
+}
+
+.workspace {
+  display: flex;
+  flex: 1;
+  min-height: 0;
+}
+
+.sidebarColumn {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  flex-shrink: 0;
+  min-height: 0;
+  background: var(--color-secondary);
+  border-right: var(--border-width-hairline) solid var(--lighter-primary);
+}
+
+.inspectorPane {
+  flex: 0 0 auto;
+  min-height: 160px;
+  overflow: hidden;
+}
+
+.inspectorResizeHandle {
+  height: 8px;
+  flex: 0 0 auto;
+  cursor: row-resize;
+  background: linear-gradient(
+    to bottom,
+    transparent 0,
+    transparent 3px,
+    var(--darker-secondary) 3px,
+    var(--darker-secondary) 5px,
+    transparent 5px,
+    transparent 100%
+  );
+}
+
+.inspectorResizeHandle:hover {
+  background: linear-gradient(
+    to bottom,
+    transparent 0,
+    transparent 2px,
+    var(--lighter-primary) 2px,
+    var(--lighter-primary) 6px,
+    transparent 6px,
+    transparent 100%
+  );
+}
+
+.projectSection {
+  padding: var(--space-10) var(--space-12);
+  border-bottom: var(--border-width-hairline) solid var(--lighter-primary);
+}
+
+.projectLabel {
+  margin: 0;
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  opacity: 0.75;
+  color: var(--color-primary);
+}
+
+.projectName {
+  margin: var(--space-4) 0 0;
+  font-family: var(--font-family-display);
+  font-size: 1.5rem;
+  font-weight: 200;
+  color: var(--color-primary);
+}
+
+.canvasColumn {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+  min-height: 0;
+  min-width: 0;
+  background: var(--color-primary);
+}

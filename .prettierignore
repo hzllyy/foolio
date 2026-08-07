@@ -1,0 +1,8 @@
+legacy
+.next
+node_modules
+coverage
+playwright-report
+test-results
+package-lock.json
+docs

@@ -1,0 +1,37 @@
+.loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: var(--color-primary);
+  color: var(--color-secondary);
+  font-family: var(--font-family-body);
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  height: 100dvh;
+}
+
+.statusBar {
+  display: flex;
+  align-items: center;
+  justify-content:center;
+  gap: var(--space-16);
+  padding: var(--space-4) var(--space-16);
+  background: var(--darker-secondary);
+  color: var(--color-primary);
+  font-family: var(--font-family-body);
+  font-size: 0.75rem;
+}
+
+.saveStatus[data-status="error"] {
+  color: #a4293d;
+  font-weight: bold;
+}
+
+.storageWarning {
+  opacity: 0.75;
+}

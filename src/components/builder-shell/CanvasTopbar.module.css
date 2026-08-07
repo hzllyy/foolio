@@ -1,0 +1,55 @@
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-12);
+  padding: var(--space-8) var(--space-12);
+  background: var(--lighter-secondary);
+  color: var(--color-primary);
+}
+
+.historyControls {
+  display: flex;
+  align-items: center;
+  gap: var(--space-6);
+}
+
+.iconButton {
+  width: 2.1rem;
+  height: 2.1rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background: transparent;
+  color: var(--color-primary);
+  cursor: pointer;
+}
+
+.iconButton:disabled {
+  opacity: 0.45;
+  cursor: default;
+}
+
+.icon {
+  width: 1rem;
+  height: 1rem;
+  display: inline-block;
+  background: currentcolor;
+  mask-position: center;
+  mask-repeat: no-repeat;
+  mask-size: contain;
+  -webkit-mask-position: center;
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-size: contain;
+}
+
+.undoIcon {
+  mask-image: url("/icons/undo.svg");
+  -webkit-mask-image: url("/icons/undo.svg");
+}
+
+.redoIcon {
+  mask-image: url("/icons/redo.svg");
+  -webkit-mask-image: url("/icons/redo.svg");
+}

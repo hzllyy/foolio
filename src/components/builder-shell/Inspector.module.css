@@ -1,0 +1,402 @@
+.inspector {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-12);
+  padding: var(--space-20) var(--space-20);
+  background: var(--color-secondary);
+  color: var(--color-primary);
+  overflow-y: auto;
+}
+
+.heading {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: 200;
+  font-family: var(--font-family-display);
+}
+
+.canvasSection {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-10);
+  padding-bottom: var(--space-8);
+  border-bottom: var(--border-width-hairline) solid var(--darker-secondary);
+}
+
+.viewportSwitcher {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: center;
+  gap: 0;
+  padding: var(--space-8);
+  min-height: 3rem;
+  border-radius: var(--radius-pill);
+  background: var(--lighter-primary);
+  overflow: hidden;
+}
+
+.viewportTrack {
+  position: absolute;
+  inset: var(--space-8);
+  width: calc(48% - var(--space-4));
+  border-radius: var(--radius-pill);
+  background: var(--color-secondary);
+  transform: translateX(var(--viewport-offset, 0%));
+  transition: transform 180ms ease;
+}
+
+.viewportOption {
+  position: relative;
+  z-index: 1;
+  min-height: 1rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  background: transparent;
+  color: var(--color-primary);
+  cursor: pointer;
+}
+
+.viewportIcon {
+  width: 1.5rem;
+  height: 1.5rem;
+  display: block;
+  background: var(--color-secondary);
+  mask-position: center;
+  mask-repeat: no-repeat;
+  mask-size: contain;
+  -webkit-mask-position: center;
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-size: contain;
+}
+
+.viewportOption[aria-pressed="true"] .viewportIcon {
+  background: var(--color-primary);
+}
+
+.desktopIcon {
+  mask-image: url("/icons/desktop.svg");
+  -webkit-mask-image: url("/icons/desktop.svg");
+}
+
+.mobileIcon {
+  mask-image: url("/icons/iphone.svg");
+  -webkit-mask-image: url("/icons/iphone.svg");
+}
+
+.zoomBar {
+  display: flex;
+  align-items: center;
+  gap: var(--space-8);
+  padding: var(--space-8) var(--space-12);
+  border-radius: var(--radius-pill);
+  background: var(--lighter-primary);
+  color: var(--color-secondary);
+}
+
+.zoomLabel {
+  padding-left: var(--space-4);
+  font-family: var(--font-family-display);
+  font-size: 1rem;
+  font-weight: 100;
+  color: var(--color-secondary);
+  white-space: nowrap;
+}
+
+.zoomRange {
+  flex: 1;
+  appearance: none;
+  height: 0.7rem;
+  border-radius: 999px;
+  background: linear-gradient(
+    to right,
+    var(--color-primary) 0,
+    var(--color-primary) var(--zoom-fill, 50%),
+    rgba(255, 255, 255, 0.45) var(--zoom-fill, 50%),
+    rgba(255, 255, 255, 0.45) 100%
+  );
+}
+
+.zoomRange::-webkit-slider-thumb {
+  appearance: none;
+  width: 1.4rem;
+  height: 1.4rem;
+  border: 0;
+  border-radius: 50%;
+  background: var(--color-secondary);
+  cursor: pointer;
+}
+
+.zoomRange::-moz-range-thumb {
+  width: 1.4rem;
+  height: 1.4rem;
+  border: 0;
+  border-radius: 50%;
+  background: var(--color-secondary);
+  cursor: pointer;
+}
+
+.pageHeightCard {
+  display: flex;
+  align-items: center;
+  gap: var(--space-8);
+  padding: var(--space-8) var(--space-12);
+  border-radius: var(--radius-pill);
+  background: var(--lighter-primary);
+  color: var(--color-secondary);
+}
+
+.pageHeightLabel {
+  font-family: var(--font-family-display);
+  font-size: 1rem;
+  font-weight: 100;
+  padding-left: var(--space-8);
+}
+
+.pageHeightValue {
+  width: 5.75rem;
+  border: 0;
+  outline: none;
+  box-shadow: none;
+  border-radius: var(--radius-pill) 0 0 var(--radius-pill);
+  padding: var(--space-8) var(--space-10) var(--space-4) var(--space-10);
+  height: 100%;
+  background: var(--color-secondary);
+  color: var(--color-primary);
+  font-family: var(--font-family-display);
+  font-size: 1.2rem;
+  line-height: 1;
+  text-align: center;
+}
+
+.pageHeightValueWrap {
+  margin-left: auto;
+  display: inline-flex;
+  align-items: center;
+  border-radius: var(--radius-pill);
+  overflow: hidden;
+  background: var(--color-secondary);
+}
+
+.pageHeightUnit {
+  display: inline-flex;
+  align-items: center;
+  padding: 0 var(--space-10) 0 0;
+  color: var(--color-primary);
+  font-family: var(--font-family-display);
+  font-size: 1rem;
+}
+
+.pageHeightValue::-webkit-outer-spin-button,
+.pageHeightValue::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.pageHeightValue[type="number"] {
+  appearance: textfield;
+}
+
+.pageHeightValue:focus-visible {
+  outline: none;
+  box-shadow: none;
+}
+
+.group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-8);
+  border: var(--border-width-hairline) solid var(--lighter-primary);
+  padding: var(--space-8) var(--space-10);
+  margin: 0;
+  border-radius: 1rem;
+}
+
+.elementProps {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-10);
+}
+
+.pairLabelRow {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-10);
+}
+
+.propertyLabel {
+  margin: 0;
+  font-family: var(--font-family-display);
+  font-size: 0.9rem;
+  padding-left: 0.5rem;
+  line-height: 0.75;
+  color: var(--lighter-primary);
+}
+
+.pairRow {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-10);
+}
+
+.pillField {
+  min-height: 2rem;
+  display: flex;
+  align-items: center;
+  gap: var(--space-8);
+  border: 2px solid var(--darker-secondary);
+  border-radius: var(--radius-pill);
+  background: var(--color-secondary);
+  padding: 0 var(--space-12);
+}
+
+.pillPrefix {
+  flex: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 0.75rem;
+  font-family: var(--font-family-display);
+  font-size: 1.15rem;
+  color: var(--lighter-primary);
+}
+
+.iconPrefix {
+  width: 1.75rem;
+  height: 1.75rem;
+  display: inline-block;
+  background: var(--lighter-primary);
+  mask-position: center;
+  mask-repeat: no-repeat;
+  mask-size: contain;
+  -webkit-mask-position: center;
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-size: contain;
+}
+
+.rotationIcon {
+  mask-image: url("/icons/rotate.svg");
+  -webkit-mask-image: url("/icons/rotate.svg");
+}
+
+.scaleIcon {
+  mask-image: url("/icons/expand.svg");
+  -webkit-mask-image: url("/icons/expand.svg");
+}
+
+.opacityIcon {
+  mask-image: url("/icons/opacity.svg");
+  -webkit-mask-image: url("/icons/opacity.svg");
+}
+
+.pillInput {
+  width: 100%;
+  min-width: 0;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  color: var(--color-primary);
+  font-family: var(--font-family-display);
+  font-size: 0.95rem;
+  line-height: 1;
+}
+
+.pillInput:disabled {
+  color: var(--lightest-primary);
+  cursor: not-allowed;
+}
+
+.pillInput::-webkit-outer-spin-button,
+.pillInput::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.pillInput[type="number"] {
+  appearance: textfield;
+}
+
+.opacityCard {
+  min-height: 2.2rem;
+  display: flex;
+  align-items: center;
+  gap: var(--space-8);
+  border: 2px solid var(--darker-secondary);
+  border-radius: var(--radius-pill);
+  background: var(--color-secondary);
+  padding: 0 var(--space-12);
+}
+
+.opacityReadout {
+  flex: none;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-4);
+  font-family: var(--font-family-display);
+  font-size: 0.95rem;
+  color: var(--color-primary);
+  min-width: 3.25rem;
+}
+
+.opacitySlider {
+  flex: 1;
+  appearance: none;
+  height: 0.65rem;
+  border-radius: 999px;
+  background: linear-gradient(
+    to right,
+    var(--color-primary) 0%,
+    var(--color-primary) var(--opacity-fill, 40%),
+    #b8c1de var(--opacity-fill, 40%),
+    #b8c1de 100%
+  );
+}
+
+.opacitySlider::-webkit-slider-thumb {
+  appearance: none;
+  width: 1.3rem;
+  height: 1.3rem;
+  border-radius: 50%;
+  border: 0;
+  background: var(--color-primary);
+  cursor: pointer;
+}
+
+.opacitySlider::-moz-range-thumb {
+  width: 1.3rem;
+  height: 1.3rem;
+  border-radius: 50%;
+  border: 0;
+  background: var(--color-primary);
+  cursor: pointer;
+}
+
+.opacitySlider:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.deselectButton {
+  margin-top: var(--space-8);
+  align-self: flex-start;
+  border: var(--border-width-regular) solid var(--color-primary);
+  background: transparent;
+  color: var(--color-primary);
+  border-radius: var(--radius-pill);
+  padding: var(--space-8) var(--space-16);
+  font-family: var(--font-family-display);
+  font-size: 1.15rem;
+}
+
+.deselectButton:hover {
+  background: var(--lighter-secondary);
+}
+
+.deselectButton:focus-visible,
+.pillInput:focus-visible,
+.opacitySlider:focus-visible {
+  outline: 3px solid var(--lighter-primary);
+  outline-offset: 2px;
+}

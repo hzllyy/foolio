@@ -1,0 +1,16 @@
+:root {
+    /* COLORS */
+
+    --color-primary: #0F2164;
+    --color-secondary: #FBF0D3;
+
+    --lighter-primary: #566498;
+    --lightest-primary: #9FA9CB;
+
+    --darker-secondary: #EBDEBD;
+
+    /* FONTS */
+    --font-family: "Jua", sans-serif;
+
+}
+

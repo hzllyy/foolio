@@ -1,0 +1,39 @@
+:root {
+  /* Brand colors carried over from the legacy prototype and Figma file (node 107:4) */
+  --color-primary: #0f2164;
+  --color-secondary: #fbf0d3;
+  --lighter-primary: #566498;
+  --lightest-primary: #9fa9cb;
+  --darker-secondary: #ebdebd;
+  --lighter-secondary: #fff9eb;
+
+  --font-family-display: var(--font-jua), sans-serif;
+  --font-family-body: var(--font-anonymous-pro), monospace;
+
+  /* Control typography sizes observed across Figma buttons/text field/segmented control */
+  --font-size-control: 2rem; /* 32px */
+  --font-size-control-lg: 2.1875rem; /* 35px, Button-primary only */
+
+  /* Spacing scale, named by the pixel values used across the Figma component sheet */
+  --space-4: 0.25rem;
+  --space-8: 0.5rem;
+  --space-10: 0.625rem;
+  --space-12: 0.75rem;
+  --space-16: 1rem;
+  --space-20: 1.25rem;
+  --space-24: 1.5rem;
+  --space-32: 2rem;
+
+  /* Border weights: hairline (segmented control), regular (tertiary button/text field), heavy (primary button) */
+  --border-width-hairline: 1px;
+  --border-width-regular: 4px;
+  --border-width-heavy: 6px;
+
+  /* All Figma controls are fully rounded pills regardless of their exact authored radius */
+  --radius-pill: 999px;
+
+  /* Toolbar/sidebar icon sizes from the Figma icon set (icons/24, icons/32, icons/48) */
+  --icon-size-sm: 24px;
+  --icon-size-md: 32px;
+  --icon-size-lg: 48px;
+}

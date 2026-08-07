@@ -1,0 +1,9 @@
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  flex: 1 1 auto;
+  border-top: var(--border-width-hairline) solid var(--lighter-primary);
+  background: var(--color-secondary);
+  color: var(--color-primary);
+}
