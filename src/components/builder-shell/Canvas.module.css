@@ -1,0 +1,73 @@
+.canvas {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+  min-height: 0;
+  min-width: 0;
+  overflow: hidden;
+  background: var(--lighter-secondary);
+  color: var(--color-primary);
+}
+
+.statusBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-16);
+  padding: var(--space-8) var(--space-16);
+  border-bottom: var(--border-width-hairline) solid var(--lightest-primary);
+  background: var(--color-secondary);
+}
+
+.viewportControl {
+  display: flex;
+  gap: var(--space-8);
+}
+
+.zoomControl {
+  display: flex;
+  align-items: center;
+  gap: var(--space-8);
+}
+
+.viewport {
+  flex: 1 1 auto;
+  min-height: 0;
+  overflow: auto;
+  padding: var(--space-32);
+}
+
+.viewportInner {
+  min-width: 100%;
+  /* min-height: 100%; */
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.zoomWrapper {
+  transform-origin: center center;
+  flex-shrink: 0;
+}
+
+.stage {
+  position: relative;
+  outline: var(--border-width-hairline) solid var(--lighter-primary);
+}
+
+.penCursor {
+  cursor: crosshair;
+}
+
+.hiddenFileInput {
+  display: none;
+}
+
+.statusText {
+  margin: 0;
+  padding: var(--space-8) var(--space-16);
+  border-top: var(--border-width-hairline) solid var(--lightest-primary);
+  background: var(--color-secondary);
+  font-size: 0.875rem;
+}

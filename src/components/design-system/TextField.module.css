@@ -1,0 +1,42 @@
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-8);
+}
+
+.label {
+  font-family: var(--font-family-display);
+  font-size: 2vh;
+  color: var(--color-primary);
+}
+
+.visuallyHiddenLabel {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.input {
+  border: var(--border-width-regular) solid var(--color-primary);
+  border-radius: var(--radius-pill);
+  padding: var(--space-8) var(--space-24);
+  font-family: var(--font-family-display);
+  font-size: 2vh;
+  color: var(--color-primary);
+  background: transparent;
+}
+
+.input::placeholder {
+  color: var(--lightest-primary);
+}
+
+.input:focus-visible {
+  outline: 3px solid var(--lighter-primary);
+  outline-offset: 2px;
+}

@@ -1,0 +1,55 @@
+.menubar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-12);
+  padding: var(--space-12) var(--space-24);
+  border-bottom: var(--border-width-hairline) solid var(--lighter-primary);
+  background: var(--color-primary);
+  color: var(--color-secondary);
+}
+
+.brandArea {
+  display: flex;
+  align-items: center;
+  flex: 0 0 auto;
+}
+
+.brandIcon {
+  width: auto;
+  height: 2rem;
+}
+
+.actions {
+  display: flex;
+  gap: 10px;
+}
+
+.buttonIcon {
+  width: 1.1rem;
+  height: 1.1rem;
+  flex: 0 0 auto;
+  display: inline-block;
+  background: currentcolor;
+  mask-position: center;
+  mask-repeat: no-repeat;
+  mask-size: contain;
+  -webkit-mask-position: center;
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-size: contain;
+}
+
+.previewIcon {
+  color: var(--color-secondary);
+  width: 1.25rem;
+  height: 1.25rem;
+  mask-image: url("/icons/eye.svg");
+  -webkit-mask-image: url("/icons/eye.svg");
+}
+
+.deployIcon {
+  color: var(--color-secondary);
+  mask-image: url("/icons/Lightning.svg");
+  -webkit-mask-image: url("/icons/Lightning.svg");
+}
+
